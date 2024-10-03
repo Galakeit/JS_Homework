@@ -23,7 +23,7 @@ for (let i = 0; i < my_pizzas.length; i++){
     }
 }
 
-let message = (unique_pizzas.length >= 1) ?  unique_pizzas : 'null';
+const message = unique_pizzas.length ?  unique_pizzas : null;
 console.log(message);
 
 //проверяем набор массивов, если ВСЕ КОПИИ, изменена только переменная списка с моими пиццами
