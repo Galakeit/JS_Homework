@@ -17,18 +17,15 @@ function mergeArray(...range) {
 new_task(2, 'Devide by _');
 
 function camelText (text) {
-const replace_text = text.replaceAll(' ','_,').split(',');
+  const replace_text = text.toLowerCase().split(' ');
 
-for (let i=0; i < replace_text.length; i++) {
-    if (i==0) {
-        let slice_word = replace_text[i];
-        replace_text[i] = slice_word[0].toLowerCase() + slice_word.slice(1);
-    } else {
-        let slice_word = replace_text[i];
-        replace_text[i] = slice_word[0].toUpperCase() + slice_word.slice(1).toLowerCase(); 
+  for (let i=0; i < replace_text.length; i++) {
+    const slice_word = replace_text[i];
+    if (i !== 0) {
+      replace_text[i] = slice_word[0].toUpperCase() + slice_word.slice(1);
     }
-}
-return replace_text.toString().replaceAll(',','');
+  }
+  return replace_text.join('_');
 }
 
 console.log(camelText('I am super engineer'))
