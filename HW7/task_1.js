@@ -35,10 +35,10 @@ new_task(3, 'Фибаначчи')
 //0, 1, 1, 2, 3, 5, 8, 13, 21,
 
 function fibanacci(n) {
-    let a = 1;
+    let a = 0;
     let b = 1;
-for (let i = 3; i <= n; i++) {
-   let c = a + b;
+for (let i = 2; i <= n; i++) {
+   const c = a + b;
    a = b;
    b = c;}
 
